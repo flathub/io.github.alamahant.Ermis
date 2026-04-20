@@ -20,6 +20,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/alamahant/Ermis.git
-        tag: v1.1.0
-        commit: eca4e200105bc9e61ffa4c0814e3c814163af581
+        tag: v1.1.1
+        commit: 0c32b78ba105767eb4b79e1df51bc4a10c09e0b8
       
