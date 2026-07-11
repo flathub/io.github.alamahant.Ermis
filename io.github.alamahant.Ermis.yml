@@ -17,9 +17,42 @@ modules:
     config-opts:
       - -DFLATPAK_BUILD=ON
       - -DCMAKE_BUILD_TYPE=Release
+    cleanup:
+      - /bin/ld
+      - /bin/as
+      - /bin/gold
+      - /bin/gprof
+      - /bin/ar
+      - /bin/ranlib
+      - /bin/strings
+      - /bin/strip
+      - /bin/nm
+      - /bin/objdump
+      - /bin/size
+      - /bin/elfedit
+      - /bin/*.py
+      - /lib/*.a
+      - /lib/*.la
+      #- /lib/libbfd-*
+      #- /lib/libopcodes-*
+      - /lib/libctf-*
+      - /lib/libsframe-*
+      - /lib/libgnu-*
+      - /lib/bfd-plugins
+      - /lib/ldscripts
+      - /lib/cmake
+      - /include
+      - /share/man
+      - /share/doc
     sources:
+      # binutils source code
+      - type: archive
+        url: https://ftp.gnu.org/gnu/binutils/binutils-2.46.0.tar.xz
+        sha256: d75a94f4d73e7a4086f7513e67e439e8fcdcbb726ffe63f4661744e6256b2cf2
+        dest: binutils_src
+
       - type: git
         url: https://github.com/alamahant/Ermis.git
-        tag: v1.1.1
-        commit: 0c32b78ba105767eb4b79e1df51bc4a10c09e0b8
+        tag: v1.1.2
+        commit: 0870a093a1486f70e47067fcbcb0e87b14f60d11
       
