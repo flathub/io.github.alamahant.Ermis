@@ -42,7 +42,8 @@ modules:
       - /lib/ldscripts
       - /lib/cmake
       - /include
-      - /share
+      - /share/man
+      - /share/doc
     sources:
       # binutils source code
       - type: archive
