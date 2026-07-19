@@ -1,6 +1,6 @@
 app-id: io.github.alamahant.Ermis
 runtime: org.kde.Platform
-runtime-version: '6.10'
+runtime-version: '6.11'
 sdk: org.kde.Sdk
 command: Ermis
 finish-args:
@@ -51,8 +51,14 @@ modules:
         sha256: d75a94f4d73e7a4086f7513e67e439e8fcdcbb726ffe63f4661744e6256b2cf2
         dest: binutils_src
 
+      #  miniupnpc source code
+      - type: archive
+        url: https://miniupnp.tuxfamily.org/files/miniupnpc-2.3.3.tar.gz
+        sha256: d52a0afa614ad6c088cc9ddff1ae7d29c8c595ac5fdd321170a05f41e634bd1a
+        dest: miniupnpc_src
+
       - type: git
         url: https://github.com/alamahant/Ermis.git
-        tag: v1.1.2
-        commit: 0870a093a1486f70e47067fcbcb0e87b14f60d11
+        tag: v1.1.3
+        commit: 825f5913a9bf7babbe0526732a076223cf54ac2d
       
